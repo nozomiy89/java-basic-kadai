@@ -11,8 +11,13 @@ public class KatoExec_Chapter17 {
 		ichiro.setGivenName();
 		hanako.setGivenName();
 		
+		taro.commonIntroduce();
 		taro.execIntroduce();
+		
+		ichiro.commonIntroduce();
 		ichiro.execIntroduce();
+		
+		hanako.commonIntroduce();
 		hanako.execIntroduce();
 
 	}
