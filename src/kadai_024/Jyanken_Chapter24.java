@@ -23,7 +23,6 @@ public class Jyanken_Chapter24 {
 				System.out.println("じゃんけんの手が正しくありません。再度入力してください。");
 			}
 		}
-		scanner.close();
 		return input;
 	}
 	
@@ -34,9 +33,7 @@ public class Jyanken_Chapter24 {
 		return random;
 	}
 	
-	public void playGame() {
-		String myChoice = getMyChoice();
-		String random = getRandom();
+	public void playGame(String myChoice, String random) {
 		
 		HashMap<String, String> output = new HashMap<String, String>();
 		
@@ -44,7 +41,7 @@ public class Jyanken_Chapter24 {
 		output.put("s", "チョキ");
 		output.put("p", "パー");
 		
-		System.out.println("自分の手は" + output.get(getMyChoice()) + ",対戦相手の手は" + output.get(getRandom()));
+		System.out.println("自分の手は" + output.get(myChoice) + ",対戦相手の手は" + output.get(random));
 		
 		if((myChoice.equals("r") && random.equals("s")) || (myChoice.equals("s") && random.equals("p")) || (myChoice.equals("p") && random.equals("r"))) {
 			System.out.println("自分の勝ちです");
